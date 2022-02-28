@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Webform 2</title>
+    <style>
+      li.nav-item {
+        border-left: solid 2px white;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+      }
+      span#greeting {
+        color: white;
+      }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MUM Golden Dome Market ::: SRM System</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Suppliers</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <span class="navbar-text mx-3" id="greeting">
+            Hello!
+          </span>
+          <button class="btn btn-light" type="submit">Sign Out</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+      <h3 class="mt-4">New Product Form</h3>
+      <form class="px-4" id="mainForm">
+      <div class="row">
+        <div class="mt-3 col-md-6">
+          <label for="productNumber" class="form-label">Product Number</label>
+          <input type="text" class="form-control" id="productNumber">
+        </div>
+        <div class="mt-3 col-md-6">
+          <label for="quantity" class="form-label">Quantity in stock</label>
+          <input type="text" class="form-control" id="quantity" value="0">
+        </div>
+        <div class="mt-3 col-md-6">
+          <label for="productName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="productName">
+        </div>
+        <div class="mt-3 col-md-6">
+          <label for="supplier" class="form-label">Supplier</label>
+          <!-- <input type="text" class="form-control" id="supplier"> -->
+          <select class="form-select" aria-label="Default select example" id="supplier">
+            <option selected>Select a supplier</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="mt-3 col-md-6">
+          <label for="price" class="form-label">Unit Price</label>
+          <input type="text" class="form-control" id="price" value="0.0">
+        </div>
+        <div class="mt-3 col-md-6">
+          <label for="dateSupplied" class="form-label">Date supplied</label>
+          <input type="text" class="form-control" id="dateSupplied"
+                aria-describedby="dateHelpBlock"
+                placeholder="yyyy-mm-dd"
+                pattern="\d{4}-\d{2}-\d{2}">
+          <small id="dateHelpBlock" class="form-text">
+              Enter a valid date.
+            </small>
+        </div>
+        
+      </div>   
+      <div class="row">
+        <div class="col-md-12">
+          <button type="submit" class="float-end mt-3 ms-3 btn btn-outline-primary">Add Product</button>
+          <button type="button" class="float-end mt-3 ms-3 btn btn-outline-danger">Cancel</button>
+          <button type="reset" class="float-end mt-3 ms-3 btn btn-outline-secondary">Reset</button>
+        </div>
+      </div> 
+    </form>
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="question2.js"></script>
+</body>
+</html>
